@@ -1,9 +1,10 @@
 package com.davidulloa.examen_2021_05_17.di;
 
 
-import com.davidulloa.examen.ui.dashboard.DashboardFragment;
-import com.davidulloa.examen.ui.file.FilesFragment;
-import com.davidulloa.examen.ui.home.HomeFragment;
+
+import com.davidulloa.examen_2021_05_17.ui.list.ListFragment;
+import com.davidulloa.examen_2021_05_17.ui.map.MapsFragment;
+import com.davidulloa.examen_2021_05_17.ui.register.RegisterEmployeFragment;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -12,12 +13,12 @@ import dagger.android.ContributesAndroidInjector;
 public abstract class FragmentBuildersModule {
 
     @ContributesAndroidInjector
-    abstract HomeFragment contributeHomeFragment();
+    abstract ListFragment contributeListFragment();
 
     @ContributesAndroidInjector
-    abstract DashboardFragment contributeDashboardFragment();
+    abstract MapsFragment contributeMapsFragment();
 
     @ContributesAndroidInjector
-    abstract FilesFragment contributeNotificacionFragment();
+    abstract RegisterEmployeFragment contributeRegisterFragment();
 
 }

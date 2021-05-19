@@ -3,9 +3,10 @@ package com.davidulloa.examen_2021_05_17.data.network;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import static com.davidulloa.examen.data.network.Status.ERROR;
-import static com.davidulloa.examen.data.network.Status.LOADING;
-import static com.davidulloa.examen.data.network.Status.SUCCESS;
+import static com.davidulloa.examen_2021_05_17.data.network.Status.ERROR;
+import static com.davidulloa.examen_2021_05_17.data.network.Status.LOADING;
+import static com.davidulloa.examen_2021_05_17.data.network.Status.SUCCESS;
+
 
 public class Resource<T> {
 

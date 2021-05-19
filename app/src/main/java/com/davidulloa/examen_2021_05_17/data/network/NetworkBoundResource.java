@@ -11,8 +11,9 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.Observer;
 
-import com.davidulloa.examen.AppExecutors;
-import com.davidulloa.examen.api.ApiResponse;
+
+import com.davidulloa.examen_2021_05_17.AppExecutors;
+import com.davidulloa.examen_2021_05_17.api.ApiResponse;
 
 import java.util.Objects;
 

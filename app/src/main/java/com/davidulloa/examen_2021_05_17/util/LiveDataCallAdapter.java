@@ -2,7 +2,8 @@ package com.davidulloa.examen_2021_05_17.util;
 
 import androidx.lifecycle.LiveData;
 
-import com.davidulloa.examen.api.ApiResponse;
+
+import com.davidulloa.examen_2021_05_17.api.ApiResponse;
 
 import java.lang.reflect.Type;
 import java.util.concurrent.atomic.AtomicBoolean;

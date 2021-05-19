@@ -50,6 +50,6 @@ public class AppModule {
 
     @Singleton
     @Provides
-    EmployeesDao providesFotoResponse(RoomDatabseEmployes db){return db.getEmployeeDao()}
+    EmployeesDao providesFotoResponse(RoomDatabseEmployes db){return db.getEmployeeDao();}
 
 }

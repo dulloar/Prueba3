@@ -3,8 +3,8 @@ package com.davidulloa.examen_2021_05_17.di;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.davidulloa.examen.ui.viewmodel.MovieViewModel;
-import com.davidulloa.examen.viewmodel.MovieViewModelFactory;
+import com.davidulloa.examen_2021_05_17.ui.viewmodel.EmployeViewModel;
+import com.davidulloa.examen_2021_05_17.viewModel.EmployesViewModelFactory;
 
 import dagger.Binds;
 import dagger.Module;
@@ -17,14 +17,9 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(EmployeViewModel.class)
-    abstract ViewModel bindMovieViewModel( movieViewModel);
+    abstract ViewModel bindMovieViewModel(EmployeViewModel employeViewModel);
 
- /*   @SuppressWarnings("unused")
-    @Binds
-    @IntoMap
-    @ViewModelKey(ImageViewModel.class)
-    abstract ViewModel bindImageViewModel(ImageViewModel imageViewModel);*/
 
     @Binds
-    abstract ViewModelProvider.Factory bindViewModelFactory(MovieViewModelFactory factory);
+    abstract ViewModelProvider.Factory bindViewModelFactory(EmployesViewModelFactory factory);
 }

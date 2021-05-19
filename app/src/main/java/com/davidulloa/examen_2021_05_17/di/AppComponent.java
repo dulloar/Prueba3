@@ -2,6 +2,7 @@ package com.davidulloa.examen_2021_05_17.di;
 
 import android.app.Application;
 
+import com.davidulloa.examen_2021_05_17.ExamenApp;
 import com.davidulloa.examen_2021_05_17.app.MyApp;
 
 import javax.inject.Singleton;
@@ -23,5 +24,5 @@ public interface AppComponent {
         AppComponent build();
     }
 
-    void inject(MyApp myApp);
+    void inject(ExamenApp myApp);
 }

@@ -17,16 +17,19 @@ import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 
-import com.davidulloa.examen.data.local.models.UserLocation;
-import com.davidulloa.examen.data.remote.repository.RepositoryLocation;
+import com.davidulloa.examen_2021_05_17.data.local.models.UserLocation;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 
+import static com.davidulloa.examen_2021_05_17.Constants.ACTION_START;
+import static com.davidulloa.examen_2021_05_17.Constants.ACTION_STOP;
+import static com.davidulloa.examen_2021_05_17.Constants.LOCATION_SERVICE_ID;
+
 public class LocationService extends Service {
 
-    private RepositoryLocation repositoryLocation;
+    //private RepositoryLocation repositoryLocation;
 
     private LocationCallback locationCallback = new LocationCallback() {
         @Override
@@ -38,7 +41,7 @@ public class LocationService extends Service {
                 double lon = locationResult.getLastLocation().getLongitude();
                 userLocation.setLat(lat);
                 userLocation.setLon(lon);
-                repositoryLocation.saveLocations(userLocation);
+                //repositoryLocation.saveLocations(userLocation);
                 Log.d("LOCATION_UPDATE", lat + "," + lon);
             }
         }
@@ -52,7 +55,7 @@ public class LocationService extends Service {
     }
 
     private void startLocationService() {
-        repositoryLocation = new RepositoryLocation();
+        //repositoryLocation = new RepositoryLocation();
         String chanelId = "location_notification_cahnel";
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         Intent resIntent = new Intent();
@@ -95,7 +98,7 @@ public class LocationService extends Service {
         }
         LocationServices.getFusedLocationProviderClient(this)
                 .requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper());
-        startForeground(com.davidulloa.examen.Constants.LOCATION_SERVICE_ID,builder.build());
+        startForeground(LOCATION_SERVICE_ID,builder.build());
 
     }
 
@@ -111,9 +114,9 @@ public class LocationService extends Service {
         if(intent != null){
             String action = intent.getAction();
             if(action != null){
-                if(action.equals(com.davidulloa.examen.Constants.ACTION_START)){
+                if(action.equals(ACTION_START)){
                     startLocationService();
-                }else if(action.equals(com.davidulloa.examen.Constants.ACTION_STOP)){
+                }else if(action.equals(ACTION_STOP)){
                     stopLocatoinService();
                 }
             }

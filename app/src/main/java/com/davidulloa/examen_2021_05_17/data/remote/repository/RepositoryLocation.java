@@ -4,16 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.davidulloa.examen.data.local.models.UserLocation;
+/*import com.davidulloa.examen.data.local.models.UserLocation;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.ValueEventListener;*/
 
 public class RepositoryLocation {
-    private String LOCATION = "location";
+    /*private String LOCATION = "location";
     private FirebaseDatabase database;
     private DatabaseReference reference;
     private MutableLiveData<UserLocation> mUserLocation = new MutableLiveData<>();
@@ -70,5 +70,5 @@ public class RepositoryLocation {
 
     private void setUserLocation(UserLocation userLocation) {
         mUserLocation.setValue(userLocation);
-    }
+    }*/
 }
