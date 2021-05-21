@@ -38,7 +38,7 @@ public class Employee {
     @Expose
     private String mail;
 
-    public class Location {
+    public static class Location {
 
         public Location() {
         }

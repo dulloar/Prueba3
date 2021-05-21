@@ -3,13 +3,13 @@ package com.davidulloa.examen_2021_05_17.ui;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.ListFragment;
 
 import android.os.Bundle;
 
 import com.davidulloa.examen_2021_05_17.R;
 import com.davidulloa.examen_2021_05_17.databinding.ActivityEmployeBinding;
 import com.davidulloa.examen_2021_05_17.di.Injectable;
+import com.davidulloa.examen_2021_05_17.ui.list.ListFragment;
 import com.davidulloa.examen_2021_05_17.ui.map.MapsFragment;
 import com.davidulloa.examen_2021_05_17.ui.register.RegisterEmployeFragment;
 
@@ -33,6 +33,8 @@ public class EmployeActivity extends AppCompatActivity implements HasSupportFrag
         if(employeBinding == null){
             employeBinding = DataBindingUtil.setContentView(this,R.layout.activity_employe);
         }
+
+        tFragment = getIntent().getIntExtra("fragment",0);
         Fragment fragment;
         switch (tFragment){
             case 1:
